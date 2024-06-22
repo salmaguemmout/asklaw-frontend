@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Law</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/AI Avatar.png') }}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<header class="w-full bg-gray-100 py-8">
+    <h1 class="m-0 text-center text-4xl font-bold display-4 text-primary text-uppercase">Ask Law</h1>
+</header>
+
+<body class="bg-white font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-1/5 bg-gray-100 border-r border-gray-300 p-4 overflow-y-auto transition-transform duration-350 ease-in-out">
+            <header class="flex items-center mb-4">
+                <img src="{{ url_for('static', filename='img/history-line-icon.png') }}" alt="History Icon" class="mr-2">
+                <span class="text-lg font-semibold">Historique</span>
+            </header>
+            <div id="chat-sessions">
+                <button onclick="createNewChat()" class="w-full text-white font-bold py-2 px-4 rounded" style="background-color: #A78A5A;">Nouvelle Conversation</button>
+                <ul id="session-list" class="mt-4">
+                    <!-- Session list items will be dynamically generated -->
+                </ul>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Main Content -->
+            <main class="p-4 overflow-y-auto relative flex-grow">
+                <button id="toggle-sidebar-btn" onclick="toggleSidebar()" class="sticky top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-200 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-300 transition-transform duration-350 ease-in-out">
+                    <img src="{{ url_for('static', filename='img/open-close-history.png') }}" alt="Toggle sidebar visibility">
+                </button>
+                <div id="chat-history" class="w-3/5 mb-4 mx-auto">
+                    <!-- Chat history content -->
+                </div>
+                <div id="messages" class="w-3/5 mb-4 mx-auto">
+                    <!-- Messages content -->
+                </div>
+            </main>
+            <!-- Chat Input Form -->
+            <form id="chat-form" onsubmit="sendMessage(event)" class="flex flex-col w-3/5 mx-auto p-4 bg-white border-t border-gray-300">
+                <textarea id="chat-input" placeholder="Cliquez pour commencer à discuter avec AskLaw " class="resize-none w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500" required></textarea>
+                <button type="submit" class="w-full text-white font-bold py-2 px-4 rounded" style="background-color: #A78A5A;">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/history.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <script type="text/javascript">
+        var deleteIconUrl = "{{ url_for('static', filename='img/delete.png') }}";
+        var sessionId = "{{ session_id }}";
+
+        // Ensure sidebar is hidden on large screens
+        
+        // Listen for resize events
+        window.addEventListener('resize', handleResize);
+
+        // Initial check
+        handleResize();
+    </script>
+</body>
+</html> 

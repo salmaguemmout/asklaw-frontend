@@ -1,0 +1,46 @@
+/* General styling for delete button */
+.delete-btn {
+    opacity: 0; /* Hide delete button by default */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity changes */
+}
+
+/* Show delete button when hovering over any session item */
+.session-item:hover .delete-btn {
+    opacity: 1; /* Show delete button on hover */
+}
+
+/* Ensure the delete button is always visible in the active session */
+.session-item.active .delete-btn {
+    opacity: 1; /* Always show delete button for the active session */
+}
+
+/* Styling for session items */
+.session-item {
+    transition: transform 0.2s ease-in-out, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+    opacity: 0.9; /* Slightly reduced opacity for inactive sessions */
+}
+
+/* Highlight the active session */
+.session-item.active {
+    opacity: 1; /* Full opacity for active session */
+    transform: scale(1.05); /* Slightly increase size to indicate active */
+}
+
+/* Additional hover effect for scaling */
+.session-item:hover {
+    transform: scale(1.05); /* Scale up on hover for emphasis */
+}
+
+/* Custom CSS to ensure minimum width for the sidebar */
+#sidebar {
+            min-width: 250px; /* Set your minimum width here */
+}
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f0;
+        }
+        .sidebar-hidden {
+            transform: translateX(-100%);
+        }

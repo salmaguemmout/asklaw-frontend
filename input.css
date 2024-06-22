@@ -1,0 +1,15 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hover effect */
+.hover-bg-red-700:hover {
+    background-color: #c53030;
+}
+
+/* Button animation */
+.active-scale {
+    transform: scale(0.95);
+
+}

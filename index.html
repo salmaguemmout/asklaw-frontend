@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ask Law</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style-new.css') }}" rel="stylesheet">
+</head>
+
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+                <a href="{{ url_for('index') }}" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Ask Law</h1>
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-white border-bottom d-none d-lg-flex">
+                    <div class="col-lg-7 text-left">
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                            <i class="fa fa-envelope text-primary mr-2"></i>
+                            <small>info@AskLaw.com</small>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="fa fa-phone-alt text-primary mr-2"></i>
+                            <small>+012 345 6789</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center p-2">
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="{{ url_for('index') }}" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Ask Law</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="{{ url_for('index') }}" class="nav-item nav-link active">Home</a>
+                            <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
+                            <a href="{{ url_for('contact') }}" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="chat_page"class="btn btn-primary mr-3 d-none d-lg-block">Découvrir</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{{ url_for('static', filename='img/carousel-1.jpg') }}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Votre Consultant Virtuel</h4>
+                            <h3 class="display-2 text-capitalize text-white mb-4">Vos Droits et Obligations en Quelques Clics</h3>
+                            <a href="chat_page"class="btn btn-primary py-3 px-5 mt-2" href="#">Commencer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="{{ url_for('static', filename='img/carousel-2.jpg') }}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Expert en Droit du Travail Marocain</h4>
+                            <h3 class="display-2 text-capitalize text-white mb-4">Des Conseils Précis et Personnalisés en Temps Réel</h3>
+                            <a href="chat_page"class="btn btn-primary py-3 px-5 mt-2" href="#">En Savoir Plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-lg btn-secondary btn-lg-square">
+                    <span class="carousel-control-prev-icon"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-lg btn-secondary btn-lg-square">
+                    <span class="carousel-control-next-icon"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded" src="{{ url_for('static', filename='img/about.jpg') }}" alt="">
+                </div>
+                <div class="col-lg-7 mt-4 mt-lg-0">
+                    <h6 href="chat_page" class="text-uppercase">En Savoir Plus</h6>
+                    <h1 class="mb-4">Des Conseils Juridiques pour Tous Vos Besoins à Portée de Main</h1>
+                    <p>ASKLAW est dédié à fournir des conseils juridiques en droit du travail rapides et précis grâce à notre technologie de chatbot IA avancée. Spécialisé dans le droit du travail marocain, nous utilisons les données basées sur le Code du Travail marocain pour vous aider à comprendre vos droits et obligations avec des réponses instantanées</p>
+                    <a href="chat_page" class="btn btn-primary mt-2">Découvrir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h6 class="text-uppercase">Notre Expertise</h6>
+                    <h1 class="mb-4">Nos Avantages</h1>
+                    <p>
+                        ASKLAW fournit des consultations expertes en droit du travail marocain. Notre application, testée et validée par un professeur de droit et un conseiller juridique, garantit des conseils précis et fiables. Découvrez les avantages uniques de notre service.
+                    </p>
+                    <a href="chat_page" class="btn btn-primary mt-2">Plus de Services</a>
+                </div>
+                <div class="col-lg-9 pt-5 pt-lg-0">
+                    <div class="bg-primary rounded" style="height: 200px;"></div>
+                    <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-landmark"></i>
+                            </div>
+                            <h5 class="mb-4 px-4">Précision Juridique</h5>
+                            <p class="m-0">Nos conseils sont basés sur le Code du Travail marocain, assurant des réponses précises et à jour à toutes vos questions.</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-users"></i>
+                            </div>
+                            <h5 class="mb-4 px-4">Support Personnalisé</h5>
+                            <p class="m-0">Chaque utilisateur reçoit des conseils adaptés à ses besoins spécifiques, qu'il soit employeur ou employé.</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-hand-holding-usd"></i>
+                            </div>
+                            <h5 class="mb-4 px-4">Économie de Temps et d'Argent</h5>
+                            <p class="m-0">Obtenez des réponses rapides sans avoir à consulter un avocat en personne, ce qui vous fait gagner du temps et de l'argent.</p>
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-gavel"></i>
+                            </div>
+                            <h5 class="mb-4 px-4">Accessibilité</h5>
+                            <p class="m-0">Disponible 24/7, ASKLAW offre des consultations juridiques à tout moment et n'importe où.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+
+<!-- Features Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6" style="min-height: 500px;">
+                <div class="position-relative h-100 rounded overflow-hidden">
+                    <img class="position-absolute w-100 h-100" src="static/img/feature.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 pt-5 pb-lg-5">
+                <div class="feature-text bg-white rounded p-lg-5">
+                    <h6 class="text-uppercase">Nos caractéristiques</h6>
+                    <h1 class="mb-4">Pourquoi nous choisir</h1>
+                    <div class="d-flex mb-4">
+                        <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                            <h5 class="text-secondary m-0">01</h5>
+                        </div>
+                        <div class="ml-4">
+                            <h5>AskLaw pour les Consommateurs Juridiques</h5>
+                            <p class="m-0">De la déchiffration des termes complexes à la compréhension de vos droits, nous vous couvrons.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                            <h5 class="text-secondary m-0">02</h5>
+                        </div>
+                        <div class="ml-4">
+                            <h5>AskLaw pour les Avocats</h5>
+                            <p class="m-0">Laissez-nous gérer la recherche et la paperasse pendant que vous améliorez les relations avec vos clients.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                            <h5 class="text-secondary m-0">03</h5>
+                        </div>
+                        <div class="ml-4">
+                            <h5>AskLaw pour les Cabinets d'Avocats</h5>
+                            <p class="m-0">En rationalisant les processus et en améliorant l'efficacité, nous révolutionnons la façon dont les cabinets d'avocats fonctionnent.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
+                            <h5 class="text-secondary m-0">04</h5>
+                        </div>
+                        <div class="ml-4">
+                            <h5>AskLaw pour les Étudiants en Droit</h5>
+                            <p class="m-0">Nous avons créé l'outil d'apprentissage parfait. Il aide les étudiants à se préparer à une carrière en droit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+       <!-- Footer Start -->
+       <footer class="container-fluid bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">Copyright © 2024 AskLaw. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-white mr-3" href="mailto:info@AskLaw.com"><i class="fa fa-envelope"></i> info@AskLaw.com</a>
+                        <a class="text-white mr-3" href="tel:+0123456789"><i class="fa fa-phone-alt"></i> +012 345 6789</a>
+                        <a class="text-white" href="{{ url_for('contact') }}">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    
+    <script type="text/javascript">
+        var deleteIconUrl = "{{ url_for('static', filename='img/delete.png') }}";
+        var sessionId = "{{ session_id }}";
+
+    </script>
+</body>
+
+</html>
